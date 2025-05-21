@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Index Page</title>
+  <style>
+    table {
+    margin: 20% auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 20%;
+    border: 1px solid #ddd;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  tr:nth-child(even) {
+   background-color: #d1d1d1;
+  }
+  </style>
+  <script>
+  
+  </script>
+</head>
+<body>
+      <h1><%=message%></h1>
+	  <%=count%>
+	  <ul>
+		<% images.forEach(image => { %>
+            <li><%=formatDate(image.createddate)%> <%= image.filename %> </li>
+		<% }); %> 
+	  </ul>
+</body>
+</html>
